@@ -22,7 +22,7 @@ def clone(g, project_id, path, ref_name, dest):
             deeper_path = os.path.join(path, node['name'])
             deeper_dir = os.path.join(dest, node['name'])
             os.mkdir(deeper_dir, 0755)
-            clone(project_id, deeper_path, ref_name, deeper_dir)
+            clone(g, project_id, deeper_path, ref_name, deeper_dir)
 
 
 def version(g, project_id):
