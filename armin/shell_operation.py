@@ -40,7 +40,7 @@ def build_package(g, project_id, path, name, src='', out=''):
 
     os.chdir(src)
     hashcode = version(g, project_id)
-    click.echo(click.style('version is ' % hashcode, fg='yellow'))
+    click.echo(click.style('version is %s ' % hashcode, fg='yellow'))
     basic_cmd_info['-v'] = hashcode
 
     cmds = ['fpm']
